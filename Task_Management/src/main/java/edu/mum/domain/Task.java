@@ -52,7 +52,7 @@ public class Task {
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	private TeamMember teamMember;
 
-
+	
 	public Task() {
 
 	}
@@ -79,6 +79,76 @@ public class Task {
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.description = description;
+	}
+
+
+	public String getTaskName() {
+		return taskName;
+	}
+
+
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+
+
+	public int getVersion() {
+		return version;
+	}
+
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+	public Date getStartTime() {
+		return startTime;
+	}
+
+
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
+
+
+	public Date getEndTime() {
+		return endTime;
+	}
+
+
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public TeamMember getTeamMember() {
+		return teamMember;
+	}
+
+
+	public void setTeamMember(TeamMember teamMember) {
+		this.teamMember = teamMember;
 	}
 
 	

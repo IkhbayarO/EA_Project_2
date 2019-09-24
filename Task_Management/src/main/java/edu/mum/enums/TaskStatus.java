@@ -1,4 +1,4 @@
-package edu.mum.domain;
+package edu.mum.enums;
 
 public enum TaskStatus {
 	ACTIVE,

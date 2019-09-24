@@ -30,7 +30,7 @@ public class Credentials {
 	Boolean enabled;
 	
 	@Valid
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "credential")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "credentials_id")
 	List<Authority> authority = new ArrayList<Authority>();
 
@@ -57,6 +57,54 @@ public class Credentials {
 		this.password = password;
 		this.verifyPassword = verifyPassword;
 		this.authority = authority;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getVerifyPassword() {
+		return verifyPassword;
+	}
+
+	public void setVerifyPassword(String verifyPassword) {
+		this.verifyPassword = verifyPassword;
+	}
+
+	public Boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public List<Authority> getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(List<Authority> authority) {
+		this.authority = authority;
+	}
+
+	public TeamMember getTeamMember() {
+		return teamMember;
+	}
+
+	public void setTeamMember(TeamMember teamMember) {
+		this.teamMember = teamMember;
 	}
 	
 	

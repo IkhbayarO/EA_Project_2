@@ -3,6 +3,7 @@ package edu.mum.domain;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import org.hibernate.validator.constraints.NotEmpty;
-
+@Entity
 public class Team {
 
 	@Id
@@ -24,7 +25,7 @@ public class Team {
 	@OneToMany(mappedBy = "team", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<TeamMember> members;
 
-	@OneToOne(fetch = FetchType.EAGER)
+	@OneToOne()
 	private Project project;
 
 	public Team(String teamName, List<TeamMember> members, Project project) {

@@ -19,11 +19,8 @@ public class Authority {
 	
 	@NotEmpty
 	private String name;
-  	@Column(nullable = false)
   	
   	
-  	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
- 	private Credentials credential;
  	
   	
   	
@@ -52,16 +49,6 @@ public class Authority {
 	}
 
 
-
-	public Credentials getCredential() {
-		return credential;
-	}
-
-
-
-	public void setCredential(Credentials credential) {
-		this.credential = credential;
-	}
 
 
 	

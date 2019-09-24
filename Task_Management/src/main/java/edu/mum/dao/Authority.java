@@ -11,6 +11,6 @@ public interface Authority extends GenericDao<Authority> {
 
 	public void update(Authority authority);
 
-	public void delete(Authority authority);
+	public void delete(Long id);
 
 }

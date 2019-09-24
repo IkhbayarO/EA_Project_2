@@ -12,5 +12,5 @@ public interface TaskDao extends GenericDao<Task>{
 
 	public void update(Task task);
 
-	public void delete(Task task);
+	public void delete(Long id);
 }

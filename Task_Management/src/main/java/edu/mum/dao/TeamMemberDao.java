@@ -11,6 +11,6 @@ public interface TeamMemberDao extends GenericDao<TeamMember>{
 	
 	public void update(TeamMember teamMember);
 	
-	public void delete(TeamMember teamMember);
+	public void delete(Long id);
 
 }
