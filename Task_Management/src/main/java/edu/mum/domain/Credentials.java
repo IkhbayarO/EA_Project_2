@@ -11,11 +11,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.validation.Valid;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-@Entity(name = "CREDENTIALS")
+@Entity
+@Table(name = "CREDENTIALS")
 public class Credentials {
 
 	@Id
@@ -30,12 +32,12 @@ public class Credentials {
 	Boolean enabled;
 	
 	@Valid
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "credentials_id")
 	List<Authority> authority = new ArrayList<Authority>();
 
 	@Valid
-	@OneToOne
+	@OneToOne(mappedBy = "credentials")
 	private TeamMember teamMember;
 
 	public Credentials() {

@@ -7,51 +7,52 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
+@Table(name = "AUTHORITY")
 public class Authority {
 
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
-	
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
 	@NotEmpty
-	private String name;
-  	
-  	
- 	
-  	
-  	
-	 public Authority() {
-
-	}
-	 
-	 
-	 
-	public Authority(String username) {
-		super();
-		this.name = name;
-
-	}
-
-
-
-	public String getName() {
-		return name;
-	}
-
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
-
-
+	private String username;
 	
+	@Column(nullable = false)
+	private String authority;
+
+	public Authority() {
+		
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(String authority) {
+		this.authority = authority;
+	}
  
  	
 }
