@@ -9,7 +9,6 @@ public interface Authority extends GenericDao<Authority> {
 
 	public List<Authority> findAll();
 
-	public void update(Authority authority);
 
 	public void delete(Long id);
 
