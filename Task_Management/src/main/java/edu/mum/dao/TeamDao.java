@@ -14,4 +14,6 @@ public interface TeamDao extends GenericDao<Team> {
 	public void update(Team team);
 
 	public void delete(Long id);
+	
+	public Team findByUserName(String teamName);
 }

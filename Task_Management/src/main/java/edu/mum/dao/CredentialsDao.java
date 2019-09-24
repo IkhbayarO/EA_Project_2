@@ -14,5 +14,7 @@ public interface CredentialsDao extends GenericDao<Credentials> {
 	public void update(Credentials credential);
 
 	public void delete(Long id);
+	
+	public Credentials findByUserName(String userName);
 
 }
